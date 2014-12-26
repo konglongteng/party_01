@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<content>
+    <resources>
+         <img id="bg_party" href="resources/pic/other/party.png" />
+         <path id="m_party" href="resources/music/party.mp3" />
+         <path id="m_a_party" href="resources/music/party_a.mp3" />
+         <script id="lua_start" href="script/start.lua" />
+    </resources>
+    <triggers>
+          <event src="root"  message="in_page_begin" dst="init_game" />
+    </triggers>
+    <layer id="root" x="0" y="0" width="1024" height="768">
+          <node type="image" resId="bg_party"  x="0" y="0"/>
+             <effect id="init_game" script="lua_start">
+                 <path name="bg_music" resId="m_party"/>
+                 <path name="bg_a_music" resId="m_a_party"/>
+             </effect>
+        
+    </layer>
+</content>
