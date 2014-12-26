@@ -7,7 +7,7 @@ function start(args)
   local delay_action = CCDelayTime:create(1)
   local music = CCCallFunc:create(function() SimpleAudioEngine:sharedEngine():playBackgroundMusic(_BACKGROUND_AUDIO1:getCString(),false) end)
   node:runAction(CCSequence:createWithTwoActions(  delay_action,  music   ))
-  
+  --kong
 end
 
 
